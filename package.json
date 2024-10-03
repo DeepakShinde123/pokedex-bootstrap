@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"parcel src/index.html",
+    "start": "parcel src/index.html",
     "build": "parcel src/build index.html"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "array-shuffle": "^3.0.0",
+    "parcel": "^2.12.0"
+  }
 }

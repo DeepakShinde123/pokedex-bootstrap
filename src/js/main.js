@@ -1,14 +1,31 @@
-import data from "./data.json";
+import data from "./data";
+import { Pokemon } from "./components/PokemonCards";
+import arrayShuffle from "array-shuffle";
 
-for (let i of data) {
-  console.log(i.name);
+const inputE1 = document.querySelector("input");
+
+renderPokemon(arrayShuffle(data));
+
+function renderPokemon(list) {
+  list.forEach((pokemonObj) => {
+    Pokemon(pokemonObj);
+  });
 }
 
-const datarow = document.querySelector("[data-row]");
-console.log(datarow);
+renderPokemon(data);
 
-for (let pokemon of data) {
-  const p = document.createElement("p");
-  p.textContent = pokemon.name;
-  datarow.appendChild(p);
+//add slash to active search
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "/") {
+    inputE1.focus()
+  }
+});
+
+
+function handleSearch(){
+  console.log("Hello");
+  
 }
+
+inputEl.addEventListener("keypress")
