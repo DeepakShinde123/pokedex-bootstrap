@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
+
+* {
+  font-family: "Teachers";
+}
+
+body {
+  background: linear-gradient(
+    68.6deg,
+    rgb(252, 165, 241) 1.8%,
+    rgb(181, 255, 255) 100.5%
+  );
+}
+
+.card {
+  height: 100%;
+  transition: all ease 1s;
+  box-shadow: 5px 5px 5px black;
+}
+.card:hover {
+  transform: scale(1.1);
+  background: linear-gradient(
+    98.3deg,
+    rgb(0, 0, 0) 10.6%,
+    rgb(255, 0, 0) 97.7%
+  );
+}

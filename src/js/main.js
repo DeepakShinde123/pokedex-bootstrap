@@ -18,14 +18,17 @@ renderPokemon(data);
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "/") {
-    inputE1.focus()
+    inputE1.focus();
   }
 });
 
+function handleSearch(input) {
+  const filteredPokemon = data.filter(pokemonObj) => {
+    return pokemonObj.name.toLowerCase().includes(input);
+  };
+  renderPokemon(filteredPokemon);
 
-function handleSearch(){
-  console.log("Hello");
-  
-}
 
-inputEl.addEventListener("keypress")
+inputE1.addEventListener("input", (e) => {
+  handleSearch(e.target.value.trim().toLowerCase());
+});
